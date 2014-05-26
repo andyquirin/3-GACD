@@ -1,17 +1,20 @@
-Code Book
+##Code Book
 Initial Data
 
-For the data used in this project, see the README.txt found in http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones.
-Data Wrangling
+This data was constructed for the Getting and Cleaning Data Coursera class
 
-The data provided in this original project are tidied into a principal research dataset of interest here, contained in the data frame "activity.frame", in the run_analysis.R script provided here.
+Data Manipulation Steps:
 
-The "activity.frame" data frame is produced by performing the following transformations:
-
-    Combine data from the original training and test datasets into one dataset.
-    Extract only those features from the original dataset that are a mean or standard deviation measure (mean or std in feature name).
-    Add subject ids (numbers 1-30) to the single data frame.
-    Add activities, by name, to the single data frame.
+#Part 1 - Read Tables into Memory
+#Part 2 - Grab only the STD and Mean columns from train and test features
+#Part 3 - Drop Unfiltered train and test sets, and combine the two filtered datasets
+#Part 4 - Attach column names and remove non-combined datasets
+#Part 5 - Read and combine the train and test activity codes
+#Part 6 - Get and combine the train and test subject ids and drop pre-combined datasets
+#Part 7 - Combine and name subjects and activity names
+#Part 8 - Generate pre-aggregated output and remove combined staging tables
+#Part 9 - Aggregate output, drop partial output table from memory and write the table to text
+And Voila!!
 
 Clean Data Columns
 
@@ -99,6 +102,3 @@ The resulting data frame has 81 columns:
 80 fBodyBodyGyroJerkMag-std()
 81 fBodyBodyGyroJerkMag-meanFreq()
 
-Computed result
-
-The result, produced in the frame "result.frame" and written to the file "mean_measures.txt", contains every uniquely occuring combination of subject id and activity (columns 1 and 2), together with the mean of each other measure for that group (columns 3 through 81).
